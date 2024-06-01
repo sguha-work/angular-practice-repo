@@ -1,0 +1,22 @@
+<table>
+    <thead>
+        <tr>
+            <th>
+                Title
+            </th>
+            <th>
+                Important?
+            </th>
+            <th>
+                Action
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let todo of allTodos$|async">
+        <td>{{todo.title}}</td>
+        <td>{{todo.important}}</td>
+        <td><a href="#" (click)="deleteTodo($event,todo.title)">Delete</a></td>
+        </tr>
+    </tbody>
+    </table>

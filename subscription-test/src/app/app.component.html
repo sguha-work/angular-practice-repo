@@ -1,0 +1,13 @@
+<div>
+  <h1>This is the app component</h1>
+  <table>
+    <tbody>
+      <tr *ngIf="consumers$==null">
+        <th>Loading data from server</th>
+      </tr>
+      <tr *ngFor="let consumer of consumers$ | async">
+        <td>{{consumer.fullName}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

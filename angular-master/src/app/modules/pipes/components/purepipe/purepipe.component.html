@@ -1,0 +1,8 @@
+<p>This is an example of <b>custom build pure pipe!</b></p>
+<div>
+    <p>Put the byte size in the input box to see corresponding megabytes</p>
+    <input type="text" [(ngModel)]="sizeInBytes"/>&nbsp;
+    <label>Equivelent megabytes <b>{{sizeInBytes | BytesToMB}}&nbsp;MB</b></label>
+    <p>This is a test timer value which changes every second, but the change of timer state doesnot affect the pipe as it is a pure pipe</p>
+    <label>{{testTimerValue}}</label>
+</div>
